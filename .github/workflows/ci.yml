@@ -38,7 +38,7 @@ jobs:
 
       # 5. Upload .jar artifact để lưu giữ và xác minh
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bank-system-jar-${{ matrix.os }}
           path: target/*.jar
