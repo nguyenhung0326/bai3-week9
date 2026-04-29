@@ -31,10 +31,12 @@ jobs:
       # 3. Chạy test (phase test tự động bao gồm compile + validate)
       - name: Run tests
         run: mvn test -Dcheckstyle.skip=true
+        shell: bash
 
       # 4. Package để tạo file .jar
       - name: Package (build .jar)
         run: mvn package -DskipTests -Dcheckstyle.skip=true
+        shell: bash
 
       # 5. Upload .jar artifact để lưu giữ và xác minh
       - name: Upload JAR artifact
